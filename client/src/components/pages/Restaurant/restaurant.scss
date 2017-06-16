@@ -1,0 +1,17 @@
+@mixin centered-div{
+	width: 60%;
+	margin: 50px auto 0;
+	@media(max-width: 544px){
+		width: 100%;
+	}	
+}
+.restaurants-container{
+	@include centered-div;
+}
+.restaurants-list{
+	@include centered-div;
+}
+.editor-container{
+	display: flex;
+	align-items: flex-start;
+}

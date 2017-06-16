@@ -1,0 +1,16 @@
+.search-container {
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  margin-left: -30px;
+    & > * {
+  	margin-left: 15px;
+  }
+  .Select {
+  	flex: 1;
+  }
+  .place-container{
+	flex: 1;
+}
+}

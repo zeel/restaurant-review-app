@@ -1,0 +1,22 @@
+@mixin centered-div{
+	width: 60%;
+	margin: 50px auto 0;
+	@media(max-width: 544px){
+		width: 100%;
+	}	
+}
+.restaurants-container{
+	@include centered-div;
+}
+.restaurants-list{
+	@include centered-div;
+}
+.text-editor{
+	flex: 1;
+	min-height: 5rem;
+}
+.star-rating{
+	position: absolute;
+	top: 1.25rem;
+	right: 1.25rem;
+}

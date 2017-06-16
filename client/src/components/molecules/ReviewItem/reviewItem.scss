@@ -1,0 +1,25 @@
+@mixin flex-container($flow: row nowrap, $justify: flex-start, $align-items: stretch, $align-content: stretch) {
+  align-content: $align-content;
+  align-items: $align-items;
+  display: flex;
+  flex-flow: $flow;
+  justify-content: $justify;
+}
+.review-item {
+	@include flex-container($justify: space-between);
+	&__user {
+		@include flex-container($align-items: center);
+		&-image {
+		    border-radius: 500rem;
+			margin-right: 12px;
+			height: auto;
+			width: 30px;
+		}
+	}
+	&__rating{
+		@include flex-container($align-items: center);
+		@media( max-width: 544px){
+			flex-direction: column;
+		}
+	}
+}

@@ -1,0 +1,44 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "bootstrap": "^4.0.0-alpha.6",
+    "classnames": "^2.2.5",
+    "google-maps": "^3.2.1",
+    "history": "^4.6.1",
+    "immutability-helper": "^2.2.0",
+    "lodash": "^4.17.4",
+    "moment": "^2.18.1",
+    "react": "^15.5.4",
+    "react-bootstrap": "^0.31.0",
+    "react-dom": "^15.5.4",
+    "react-google-maps-loader": "^2.0.2",
+    "react-google-places-suggest": "^2.1.1",
+    "react-redux": "^5.0.5",
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1",
+    "react-router-redux": "^4.0.8",
+    "react-star-rating-component": "^1.2.4",
+    "react-textarea-autosize": "^5.0.6",
+    "redux": "^3.6.0",
+    "redux-saga": "^0.15.3",
+    "superagent": "^3.5.2"
+  },
+  "devDependencies": {
+    "node-sass-chokidar": "0.0.1",
+    "npm-run-all": "^4.0.2",
+    "react-scripts": "1.0.3"
+  },
+  "scripts": {
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "npm run build-css && react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "proxy": "http://localhost:8080/"
+}
