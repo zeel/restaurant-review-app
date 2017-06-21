@@ -1,6 +1,6 @@
 /node_modules/*
 /public/*
-/views/*
+/build/*
 /.git/*
 /.gitignore
 /package.json

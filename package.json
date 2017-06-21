@@ -14,12 +14,14 @@
   "man": "./man.1",
   "license": "UNLICENSED",
   "scripts": {
-    "build": "babel --presets env ./",
-    "server:debug": "nodemon --ignore client/ ./bin/www --exec babel-node --presets env",
-    "build-server": "babel app.js -o app.prod.js",
-    "server": "node app.prod.js",
-    "client": "node start-client.js",
-    "start": "concurrently \"npm run server:debug\" \"npm run client\"",
+    "clean": "rm -rf build && mkdir build",
+    "build": "npm run clean && npm run build-server && npm run build-client",
+    "build-server": "babel -d ./build ./server -s --presets=env --plugins='babel-plugin-add-module-exports'",
+    "build-client": "node start-client.js build",
+    "start": "node ./bin/www",
+    "start:client:dev": "node start-client.js start",
+    "start:server:dev": "nodemon --ignore client/ ./bin/www --exec babel-node --presets env",
+    "start:dev": "concurrently \"npm run start:server:dev\" \"npm run start:client:dev\"",
     "debug": "nodemon --inspect ./bin/www --exec babel-node --presets env --ignore client",
     "postinstall": "cd client && npm install"
   },
@@ -43,6 +45,7 @@
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
+    "babel-plugin-add-module-exports": "^0.2.1",
     "babel-preset-env": "^1.5.0",
     "babel-preset-flow": "^6.23.0",
     "concurrently": "^3.4.0",
