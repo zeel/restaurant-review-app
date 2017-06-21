@@ -18,6 +18,10 @@
     "start": "nodemon --ignore client/ ./bin/www --exec babel-node --presets env",
     "debug": "nodemon --inspect ./bin/www --exec babel-node --presets env --ignore client"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zeel/warp-assignment.git"
+  },
   "dependencies": {
     "bluebird": "^3.5.0",
     "body-parser": "~1.17.1",
