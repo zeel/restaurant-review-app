@@ -1,8 +1,20 @@
 {
   "name": "review-system",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "bugs": {
+    "url": "https://github.com/zeel/warp-assignment/issues",
+    "email": "kshah215@gmail.com"
+  },
   "private": true,
+  "author": {
+    "name": "Zeel Shah",
+    "email": "kshah215@gmail.com"
+  },
+  "main": "app.js",
+  "man": "./man.1",
+  "license": "UNLICENSED",
   "scripts": {
+    "build": "babel --presets env ./",
     "start": "nodemon --ignore client/ ./bin/www --exec babel-node --presets env",
     "debug": "nodemon --inspect ./bin/www --exec babel-node --presets env --ignore client"
   },
@@ -23,6 +35,9 @@
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-preset-env": "^1.5.0",
+    "babel-preset-flow": "^6.23.0",
+    "flow": "^0.2.3",
+    "flow-bin": "^0.48.0",
     "nodemon": "^1.11.0"
   }
 }
