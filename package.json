@@ -16,7 +16,8 @@
   "scripts": {
     "build": "babel --presets env ./",
     "server:debug": "nodemon --ignore client/ ./bin/www --exec babel-node --presets env",
-    "server": "babel-node --presets env ./bin/www",
+    "build-server": "babel app.js -o app.prod.js",
+    "server": "node app.prod.js",
     "client": "node start-client.js",
     "start": "concurrently \"npm run server:debug\" \"npm run client\"",
     "debug": "nodemon --inspect ./bin/www --exec babel-node --presets env --ignore client",
