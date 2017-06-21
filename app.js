@@ -9,7 +9,7 @@ import routes from './routes/reviews';
 import mongoose from 'mongoose';
 
 //move to env
-const mongodb = 'mongodb://localhost/review-system';
+const mongodb = 'mongodb://zeel215:zeel215@ds149577.mlab.com:49577/review-system';
 mongoose.connect(mongodb);
 var app = express();
 
