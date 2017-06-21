@@ -18,7 +18,7 @@
     "build": "npm run clean && npm run build-server && npm run build-client",
     "build-server": "babel -d ./build ./server -s --presets=env --plugins='babel-plugin-add-module-exports'",
     "build-client": "node start-client.js build",
-    "start": "node ./bin/www",
+    "start": "node ./build/app.js",
     "start:client:dev": "node start-client.js start",
     "start:server:dev": "nodemon --ignore client/ ./bin/www --exec babel-node --presets env",
     "start:dev": "concurrently \"npm run start:server:dev\" \"npm run start:client:dev\"",
