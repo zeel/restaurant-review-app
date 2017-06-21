@@ -13,6 +13,10 @@ const mongodb = 'mongodb://localhost/review-system';
 mongoose.connect(mongodb);
 var app = express();
 
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('client/build'));
+}
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');

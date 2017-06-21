@@ -15,9 +15,10 @@
   "license": "UNLICENSED",
   "scripts": {
     "build": "babel --presets env ./",
-    "server": "nodemon --ignore client/ ./bin/www --exec babel-node --presets env",
+    "server:debug": "nodemon --ignore client/ ./bin/www --exec babel-node --presets env",
+    "server": "babel-node --presets env ./bin/www",
     "client": "node start-client.js",
-    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "start": "concurrently \"npm run server:debug\" \"npm run client\"",
     "debug": "nodemon --inspect ./bin/www --exec babel-node --presets env --ignore client",
     "postinstall": "cd client && npm install"
   },
