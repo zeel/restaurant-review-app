@@ -4,7 +4,7 @@ import {
 
 const router = new Router();
 
-import ReviewController from '../controllers/ReviewController';
+import ReviewController from '../controllers/reviewController';
 
 const controller = new ReviewController();
 
