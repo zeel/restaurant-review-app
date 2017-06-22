@@ -14,15 +14,15 @@ exports.default = function (router) {
 
 var _express = require('express');
 
-var _ReviewController = require('../controllers/ReviewController');
+var _reviewController = require('../controllers/reviewController');
 
-var _ReviewController2 = _interopRequireDefault(_ReviewController);
+var _reviewController2 = _interopRequireDefault(_reviewController);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var router = new _express.Router();
 
-var controller = new _ReviewController2.default();
+var controller = new _reviewController2.default();
 
 module.exports = exports['default'];
 //# sourceMappingURL=reviews.js.map
