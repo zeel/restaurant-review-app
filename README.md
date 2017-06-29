@@ -1,4 +1,4 @@
-# warp-assignment
+# restaurant-review-app
 express application for tourist to search restaurants and give/see reviews
 
 
