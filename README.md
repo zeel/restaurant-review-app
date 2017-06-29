@@ -1,4 +1,4 @@
-# restaurant-review-app
+# restaurant-review-app [![Build Status](https://travis-ci.org/zeel/restaurant-review-app.svg?branch=master)](https://travis-ci.org/zeel/restaurant-review-app)
 express application for tourist to search restaurants and give/see reviews
 
 
