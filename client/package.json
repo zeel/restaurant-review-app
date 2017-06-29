@@ -6,6 +6,7 @@
     "bluebird": "^3.5.0",
     "bootstrap": "^4.0.0-alpha.6",
     "classnames": "^2.2.5",
+    "enzyme": "^2.9.1",
     "history": "^4.6.1",
     "immutability-helper": "^2.2.0",
     "lodash": "^4.17.4",
@@ -20,10 +21,12 @@
     "react-router-dom": "^4.1.1",
     "react-router-redux": "^4.0.8",
     "react-star-rating-component": "^1.2.4",
+    "react-test-renderer": "^15.6.1",
     "react-textarea-autosize": "^5.0.6",
     "redux": "^3.6.0",
     "redux-saga": "^0.15.3",
-    "superagent": "^3.5.2"
+    "superagent": "^3.5.2",
+    "react-select": "^1.0.0-rc.5"
   },
   "devDependencies": {
     "node-sass-chokidar": "0.0.1",

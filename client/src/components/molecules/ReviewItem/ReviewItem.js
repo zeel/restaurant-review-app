@@ -7,7 +7,12 @@ import './reviewItem.css';
 const DEFAULT_PROFILE_IMG = 'https://www.grmep.org/wp-content/themes/grmep-theme/images/default-user-img.jpg';
 class ReviewItem extends React.PureComponent {
   static propTypes = {
-    review: PropTypes.object,
+    review: PropTypes.shape({
+      profile_photo_url: PropTypes.string,
+      author_name: PropTypes.string,
+      rating: PropTypes.number,
+      text: PropTypes.string,
+    }),
     isEditMode: PropTypes.bool,
     onUpdate: PropTypes.func,
     hasError: PropTypes.bool,
